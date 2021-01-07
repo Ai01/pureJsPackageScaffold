@@ -2,7 +2,6 @@
 const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
-const path = require("path");
 
 module.exports = class extends Generator {
   async prompting() {
