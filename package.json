@@ -4,7 +4,7 @@
   "description": "pure js package scaffold",
   "homepage": "",
   "author": {
-    "name": "baihaihui",
+    "name": "haihui",
     "email": "",
     "url": ""
   },
@@ -16,7 +16,6 @@
     "yeoman",
     "scaffold",
     "pureJs",
-    "",
     "yeoman-generator"
   ],
   "devDependencies": {
