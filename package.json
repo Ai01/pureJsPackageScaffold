@@ -2,6 +2,7 @@
   "name": "generator-pure-js-package-scaffold",
   "version": "1.0.0",
   "description": "pure js package scaffold",
+  "private": false,
   "homepage": "",
   "author": {
     "name": "haihui",
@@ -14,7 +15,6 @@
   "main": "generators/index.js",
   "keywords": [
     "yeoman",
-    "scaffold",
     "pureJs",
     "yeoman-generator"
   ],
@@ -75,6 +75,14 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ai01/pureJsPackageScaffold.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "license": "Apache-2.0"
 }
