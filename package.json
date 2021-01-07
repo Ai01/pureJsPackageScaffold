@@ -1,7 +1,6 @@
 {
   "name": "generator-pure-js-package-scaffold",
   "version": "1.0.0",
-  "private": true,
   "description": "pure js package scaffold",
   "homepage": "",
   "author": {
