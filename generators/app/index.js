@@ -1,34 +1,80 @@
-'use strict';
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
+"use strict";
+const Generator = require("yeoman-generator");
+const chalk = require("chalk");
+const yosay = require("yosay");
+const path = require("path");
 
 module.exports = class extends Generator {
-  prompting() {
+  async prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the dazzling ${chalk.red('generator-pure-js-package-scaffold')} generator!`)
+      yosay(
+        `Welcome to the dazzling ${chalk.red(
+          "generator-pure-js-package-scaffold"
+        )} generator!`
+      )
     );
 
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
-        default: true
+        type: "input",
+        name: "packageName",
+        message: "you package name?"
+      },
+      {
+        type: "input",
+        name: "packageVersion",
+        message: "you package version?"
+      },
+      {
+        type: "input",
+        name: "packageAuthor",
+        message: "package author?"
+      },
+      {
+        type: "input",
+        name: "packageDesc",
+        message: "package description?"
       }
     ];
 
-    return this.prompt(prompts).then(props => {
+    await this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
     });
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+    console.log(this.props);
+
+    this.fs.copyTpl(
+      this.templatePath("package.json"),
+      this.destinationPath("./package.json"),
+      {
+        packageName: this.props.packageName,
+        packageVersion: this.props.packageVersion,
+        packageAuthor: this.props.packageAuthor,
+        packageDesc: this.props.packageDesc
+      }
+    );
+
+    this.fs.copyTpl(this.templatePath("src"), this.destinationPath("./src"));
+    this.fs.copyTpl(this.templatePath("test"), this.destinationPath("./test"));
+    this.fs.copyTpl(
+      this.templatePath("readme.md"),
+      this.destinationPath("./reade.md")
+    );
+    this.fs.copyTpl(
+      this.templatePath("babel.config.json"),
+      this.destinationPath("./babel.config.json")
+    );
+    this.fs.copyTpl(
+      this.templatePath(".gitignore"),
+      this.destinationPath("./gitignore")
+    );
+    this.fs.copyTpl(
+      this.templatePath(".eslintrc.js"),
+      this.destinationPath("./eslintrc.js")
     );
   }
 
