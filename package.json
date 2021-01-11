@@ -6,8 +6,7 @@
   "homepage": "",
   "author": {
     "name": "haihui",
-    "email": "",
-    "url": ""
+    "email": "baihaihui131225@gmail.com"
   },
   "files": [
     "generators"
@@ -39,7 +38,8 @@
     "yosay": "^2.0.1"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "modulePathIgnorePatterns": ["generators"]
   },
   "lint-staged": {
     "*.js": [
