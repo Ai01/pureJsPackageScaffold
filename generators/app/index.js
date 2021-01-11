@@ -68,7 +68,7 @@ module.exports = class extends Generator {
       this.destinationPath("./babel.config.json")
     );
     this.fs.copyTpl(
-      this.templatePath("__gitignore"),
+      this.templatePath("_gitignore"),
       this.destinationPath("./.gitignore")
     );
     this.fs.copyTpl(
