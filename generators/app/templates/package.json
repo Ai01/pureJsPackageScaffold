@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "npm run lint && npm run test && npx babel src --out-dir lib --presets=@babel/env",
-    "prepublish": "npm run lint && npm run build",
+    "mpublish": "npm run lint && npm run build && npm publish",
     "generateEslintLintFile": "npx eslint --init",
     "lint": "eslint src --fix",
     "test": "npx jest"

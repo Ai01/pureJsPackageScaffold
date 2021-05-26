@@ -1,19 +1,11 @@
 module.exports = {
+  extends: ["xo", "prettier"],
   env: {
-    browser: true,
-    es6: true,
-  },
-  extends: [
-    'airbnb-base',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
+    jest: true,
+    node: true
   },
   rules: {
-    "no-restricted-syntax": 1
+    "prettier/prettier": "error"
   },
+  plugins: ["prettier"]
 };
