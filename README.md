@@ -1,36 +1,10 @@
-# generator-pure-js-package-scaffold [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> pure js package scaffold
+# npm包yeoman脚手架
 
-## Installation
+## 目的
 
-First, install [Yeoman](http://yeoman.io) and generator-pure-js-package-scaffold using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+用yeoman一键生成npm包工程结构
 
-```bash
-npm install -g yo
-npm install -g generator-pure-js-package-scaffold
-```
+## 功能
 
-Then generate your new project:
-
-```bash
-yo pure-js-package-scaffold
-```
-
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
-
-## License
-
-Apache-2.0 © [Ai01]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-pure-js-package-scaffold.svg
-[npm-url]: https://npmjs.org/package/generator-pure-js-package-scaffold
-[travis-image]: https://travis-ci.com/Ai01/generator-pure-js-package-scaffold.svg?branch=master
-[travis-url]: https://travis-ci.com/Ai01/generator-pure-js-package-scaffold
-[daviddm-image]: https://david-dm.org/Ai01/generator-pure-js-package-scaffold.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/Ai01/generator-pure-js-package-scaffold
+1. 支持生成一个纯js的npm包脚手架工具
+2. 可以测试这个包是否合理

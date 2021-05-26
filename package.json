@@ -33,13 +33,16 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "yeoman-generator": "^2.0.1",
     "chalk": "^2.1.0",
+    "fs-extra": "^9.1.0",
+    "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   },
   "jest": {
     "testEnvironment": "node",
-    "modulePathIgnorePatterns": ["generators"]
+    "modulePathIgnorePatterns": [
+      "generators"
+    ]
   },
   "lint-staged": {
     "*.js": [
@@ -56,25 +59,10 @@
       "pre-commit": "lint-staged"
     }
   },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": "error"
-    },
-    "plugins": [
-      "prettier"
-    ]
-  },
   "scripts": {
     "pretest": "eslint .",
-    "test": "jest"
+    "genTemplate": "node ./scripts/test.js",
+    "lintFix": "eslint ./generators --ext .jsx,.js,.ts,.tsx --fix"
   },
   "repository": {
     "type": "git",
