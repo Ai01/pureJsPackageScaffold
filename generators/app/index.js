@@ -67,6 +67,10 @@ module.exports = class extends Generator {
       this.destinationPath("./rollup.config.js")
     );
     this.fs.copyTpl(
+      this.templatePath("babel.config.json"),
+      this.destinationPath("./babel.config.json")
+    );
+    this.fs.copyTpl(
       this.templatePath("_gitignore"),
       this.destinationPath("./.gitignore")
     );
